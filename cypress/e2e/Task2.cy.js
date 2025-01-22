@@ -20,8 +20,15 @@ describe('Web Application Basic Test', () => {
       cy.get('.css-37cp2p').click(); // Click the login button
       // Verify successful login by checking the presence of the dashboard
       cy.url().should('include', '/dashboard'); // Dashboard is visible after login
+
       cy.visit('https://hw.dmlabs.in/login'); // Redirect back to the login page for further tests
-  
+
+      // Logout
+      cy.get('.css-15vogpg').click(); // Click the hamburger icon
+    cy.get('.css-4g6ai3').should('be.visible').click(); // Click the logout button
+    cy.get(':nth-child(12) > [data-layer="Content"]').should('be.visible').click() // Verify logout is successful
+
+
       // Scenario 4: Invalid login (incorrect credentials)
       cy.get('#email-login').clear().type('invalidUser@gmail.com'); // Invalid username
       cy.get('#password-login').clear().type('wrongPassword@123'); // Invalid password
