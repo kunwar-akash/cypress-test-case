@@ -1,3 +1,4 @@
+import { cy } from "cypress";
 describe('Login using Microsoft', () => {
   beforeEach(() => {
     // Navigate to the application's login page

@@ -1,6 +1,6 @@
+import { cy } from "cypress";
 describe('Login API Test Suite', () => {
-  
-    const baseUrl = 'https://hw-api.dmlabs.in/auth/login'; // Replace with the actual API endpoint
+  const baseUrl = 'https://hw-api.dmlabs.in/auth/login'; // Replace with the actual API endpoint
   
     it('Valid Login - Should return success status', () => {
       cy.request({

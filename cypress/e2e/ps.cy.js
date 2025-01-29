@@ -1,3 +1,4 @@
+import { cy } from "cypress";
 describe('Verify Page Title and Sign Up', () => {
     it('should display the correct title, click sign-up, and create a new user', () => {
   
