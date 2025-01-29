@@ -1,3 +1,4 @@
+import { cy } from "cypress";
 describe('Web Application Basic Test', () => {
  
     it('Multiple scenarios for website functionality', () => {
