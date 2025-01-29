@@ -1,3 +1,4 @@
+import { cy } from "cypress";
 describe('Web Application Basic Test', () => {
  
   // website loading and title verification
